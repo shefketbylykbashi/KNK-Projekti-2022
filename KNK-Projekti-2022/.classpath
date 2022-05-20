@@ -7,5 +7,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Database"/>
+	<classpathentry kind="lib" path="C:/Users/Shefk_ugzgsqs/git/ClinicManagementProjectFX/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Shefk_ugzgsqs/git/ClinicManagementProjectFX/fontbox-2.0.24.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Shefk_ugzgsqs/git/ClinicManagementProjectFX/pdfbox-2.0.24.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
