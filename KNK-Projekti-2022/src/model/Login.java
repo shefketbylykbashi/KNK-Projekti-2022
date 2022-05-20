@@ -58,6 +58,28 @@ public  class Login {
 
     }
 
+    
+    public  static int login(String user , String password){
+
+
+        String query = "SELECT user_id FROM users WHERE username = ? AND password = ?";
+
+       try {
+           PreparedStatement st = cnx.prepareStatement(query);
+           st.setString(1,user);
+           st.setString(2,password);
+           ResultSet rs = st.executeQuery();
+           if(rs.next()){
+
+               return rs.getInt("user_id");
+           }
+
+       } catch (SQLException throwables) {
+           throwables.printStackTrace();
+       }
+
+         return 0;
+   }
 
 
 
