@@ -189,4 +189,6 @@ TextArea {
 
 .default-color2.chart-pie{ -fx-pie-color: #c3e6fa}
 
+.default-color0.chart-series-line { -fx-stroke: #56afe3; }
+.default-color0.chart-line-symbol { -fx-background-color: #065380, #c3e6fa; }
 
