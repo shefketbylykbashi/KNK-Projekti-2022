@@ -5,7 +5,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import model.Patient;
 
@@ -37,6 +39,8 @@ public class HomeController implements Initializable {
     @FXML
     private PieChart pieChart;
  
+    @FXML
+    private LineChart lineChart;
 
     @FXML
     private Label todayincome;
@@ -46,6 +50,7 @@ public class HomeController implements Initializable {
     public static String med1;
     public static String med2;
     ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
+    XYChart.Series series = new XYChart.Series<>();
     
 
     
@@ -57,15 +62,17 @@ public class HomeController implements Initializable {
         med2fullname.setText(med2);
         
         
-       buildPieChartData();
+       buildChartsData();
        pieChart.setTitle("APPOINTMENTS THROUGHOUT THE YEAR");
        pieChart.getData().addAll(data);
+       
+       lineChart.getData().addAll(series);
        
           
         
     }
     
-    public void buildPieChartData() {
+    public void buildChartsData() {
     	
             try {            	
 				String sql = 
@@ -74,7 +81,8 @@ public class HomeController implements Initializable {
                 ResultSet rs = cnx.createStatement().executeQuery(sql);
                 
                 while(rs.next()) {
-                	data.add(new PieChart.Data(rs.getString(2), rs.getDouble(1)));
+                	this.data.add(new PieChart.Data(rs.getString(2), rs.getDouble(1)));
+                	this.series.getData().add(new XYChart.Data<>(rs.getString(2), rs.getInt(1)));
                 }
 
             } catch (SQLException e) {
@@ -83,4 +91,5 @@ public class HomeController implements Initializable {
             }
     }
     
+
 }
