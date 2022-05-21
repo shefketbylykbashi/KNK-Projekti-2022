@@ -21,9 +21,9 @@ public class Patient {
 
 
 
-    // this three arguments are mandatory for every patient the rest is optional
+    // three arguments are mandatory for every patient the rest is optional
     public Patient(String first_name, String second_name, Date dateOfbirth) {
-        this(first_name, second_name, dateOfbirth, "m", "00,Rue,Commune,Wilaya", "0000000000");
+        this(first_name, second_name, dateOfbirth, "M", "Prishtine", "0000000000");
 
     }
 
