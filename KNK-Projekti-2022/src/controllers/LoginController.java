@@ -30,10 +30,7 @@ import java.sql.SQLException;
 import java.util.Random;
 
 import database.CnxWithDB;
-/**
- * @author AyoubFRIHAOUI
- * @author WalidABDALLAOUI
- */
+
 public class LoginController {
     @FXML
     public AnchorPane back_pane;
@@ -57,8 +54,6 @@ public class LoginController {
     public PasswordField password_field;
     @FXML
     public Button submit_button;
-    //this invisible label is used only to retrieve username text from button
-    // , whenever you click on a button this label will get the username text
     @FXML
     public Label invisibleUsernameLabel;
     public void user_button_1OnAction(ActionEvent event) {
@@ -88,37 +83,11 @@ public class LoginController {
         user_button_2.getStyleClass().add("userbutton");
         user_button_3.getStyleClass().add("userbuttonChecked");
     }
-    //whenever the mouse is moved update the usernames from the db ,
-    // this will allow us to have runtime synchironisation between the users db and login window
+
     public void back_paneOnMouseMoved(MouseEvent event) {
         model.Login.initUsernameButtons(user_button_1, user_button_2, user_button_3);
     }
     
-//    public static String generateSalted() {
-//		Random random = new SecureRandom();
-//		int length = 64;
-//		
-//	    StringBuilder sb = new StringBuilder(length);
-//	    for (int i = 0; i < length; i++) {
-//	      int c = random.nextInt(62);
-//	      if (c <= 9) {
-//	        sb.append(String.valueOf(c));
-//	      } else if (c < 36) {
-//	        sb.append((char) ('a' + c - 10));
-//	      } else {
-//	        sb.append((char) ('A' + c - 36));
-//	      }
-//	      
-//	    }
-//	    System.out.println("salted: " + sb.toString());
-//	    
-//	    return sb.toString();
-//	    
-//	  }
-    
- 
-   
-   
     private static String bytesToHex(byte[] hash) {
 	    StringBuilder hexString = new StringBuilder(2 * hash.length);
 	    for (int i = 0; i < hash.length; i++) {
@@ -164,14 +133,13 @@ public class LoginController {
         String saltedHash = LoginController.generate(password, salted);
         
         int user_id = Login.login(user, saltedHash);
-        //show error alert
+        
         if (user_id == 0) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "The password entered is incorrect.");
             password_field.setText("");
             alert.showAndWait();
         }
-        //close the login window , show successful login alert ,
-        // open the main app window and set the user_id in the window Controller to the user_id retrieved from login
+     
         else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Logged in succesfuly!");
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -185,7 +153,7 @@ public class LoginController {
         b.getStyleClass().remove("userbutton");
         b.getStyleClass().remove("userbuttonChecked");
     }
-    // open the application main window
+    
     public void openAppWindow(Stage window) throws IOException {
         Parent appParent;
         int x,y;

@@ -10,16 +10,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-/**
- * @author WalidABDALLAOUI
- */
+
 
 public  class Login {
 
  
 	
     static public Connection cnx = CnxWithDB.getConnection();
-// initialize username buttons with real usernames from the users db
+
     public static void initUsernameButtons(Button b1, Button b2, Button b3) {
         String query = "SELECT username FROM users WHERE user_id = ?";
         try (PreparedStatement st = cnx.prepareStatement(query)) {

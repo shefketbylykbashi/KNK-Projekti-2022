@@ -8,9 +8,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * @author wabda
- */
+
 public class CnxWithDB {
     private static final String servername = "localhost";
     private static final Integer port = 3306;
