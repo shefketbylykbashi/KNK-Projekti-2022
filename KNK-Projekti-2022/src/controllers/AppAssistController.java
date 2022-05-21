@@ -50,3 +50,145 @@ public class AppAssistController implements Initializable {
     private Button btn_logout;
     @FXML
     private HBox hb_logout;
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
+    public void cleanHboxStyles(Button b) {
+        b.getStyleClass().remove("dash_buttons");
+        b.getStyleClass().remove("dash_buttons_selected");
+    }
+
+
+    @FXML
+    private void loadHomePage(ActionEvent e) {
+       // cleanHboxStyles(btn_accounting);
+        cleanHboxStyles(btn_appointments);
+        cleanHboxStyles(btn_home);
+        cleanHboxStyles(btn_patients);
+        cleanHboxStyles(btn_watingroom);
+        btn_appointments.getStyleClass().add("dash_buttons");
+       // btn_accounting.getStyleClass().add("dash_buttons");
+        btn_home.getStyleClass().add("dash_buttons_selected");
+        btn_patients.getStyleClass().add("dash_buttons");
+        btn_watingroom.getStyleClass().add("dash_buttons");
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("Home");
+        mainPane.setCenter(view);
+
+    }
+
+    @FXML
+    private void loadAppointmentsPage(ActionEvent e) {
+       // cleanHboxStyles(btn_accounting);
+        cleanHboxStyles(btn_appointments);
+        cleanHboxStyles(btn_home);
+        cleanHboxStyles(btn_patients);
+        cleanHboxStyles(btn_watingroom);
+        btn_appointments.getStyleClass().add("dash_buttons_selected");
+      //  btn_accounting.getStyleClass().add("dash_buttons");
+        btn_home.getStyleClass().add("dash_buttons");
+        btn_patients.getStyleClass().add("dash_buttons");
+        btn_watingroom.getStyleClass().add("dash_buttons");
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("Apps");
+        mainPane.setCenter(view);
+
+    }
+    @FXML
+    private void loadWaitingRoomPage(ActionEvent e) {
+      //  cleanHboxStyles(btn_accounting);
+        cleanHboxStyles(btn_appointments);
+        cleanHboxStyles(btn_home);
+        cleanHboxStyles(btn_patients);
+        cleanHboxStyles(btn_watingroom);
+        btn_appointments.getStyleClass().add("dash_buttons");
+      //  btn_accounting.getStyleClass().add("dash_buttons");
+        btn_home.getStyleClass().add("dash_buttons");
+        btn_patients.getStyleClass().add("dash_buttons");
+        btn_watingroom.getStyleClass().add("dash_buttons_selected");
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("WaitingRoom");
+        mainPane.setCenter(view);
+    }
+    @FXML
+    private void loadPatientsPage(ActionEvent e) {
+       // cleanHboxStyles(btn_accounting);
+        cleanHboxStyles(btn_appointments);
+        cleanHboxStyles(btn_home);
+        cleanHboxStyles(btn_patients);
+        cleanHboxStyles(btn_watingroom);
+        btn_appointments.getStyleClass().add("dash_buttons");
+      //  btn_accounting.getStyleClass().add("dash_buttons");
+        btn_home.getStyleClass().add("dash_buttons");
+        btn_patients.getStyleClass().add("dash_buttons_selected");
+        btn_watingroom.getStyleClass().add("dash_buttons");
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("PatientsScene");
+        mainPane.setCenter(view);
+    }
+    @FXML
+    void loadConsultationPage(ActionEvent e) {
+      //  cleanHboxStyles(btn_accounting);
+        cleanHboxStyles(btn_appointments);
+
+        cleanHboxStyles(btn_home);
+        cleanHboxStyles(btn_patients);
+        cleanHboxStyles(btn_watingroom);
+        btn_appointments.getStyleClass().add("dash_buttons");
+      //  btn_accounting.getStyleClass().add("dash_buttons");
+        btn_home.getStyleClass().add("dash_buttons");
+        btn_patients.getStyleClass().add("dash_buttons");
+        btn_watingroom.getStyleClass().add("dash_buttons");
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("AppCons");
+        mainPane.setCenter(view);
+    }
+    
+    @FXML
+    void logOut(ActionEvent e) throws IOException {
+    	btn_logout.getScene().getWindow().hide();
+    	
+    	Stage stage = new Stage();
+    	Parent root = FXMLLoader.load(getClass().getResource("/views/Login.fxml"));
+        Scene scene = new Scene(root, 1280, 720);
+        Image img = new Image("/resources/Group2.png");
+        /*scene.getStylesheets().add(getClass().getResource("LogingStyling.css").toExternalForm());*/
+        stage.setScene(scene);
+        stage.getIcons().add(img);
+        stage.setTitle("Cabinet++");
+        stage.setResizable(true);
+
+        stage.show();
+    }
+
+    void loadCons() {
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("AppCons");
+        mainPane.setCenter(view);
+    }
+    public static void setUser_id(int user_id) {
+        AppController.user_id = user_id;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+     //   cleanHboxStyles(btn_accounting);
+        cleanHboxStyles(btn_appointments);
+        cleanHboxStyles(btn_home);
+        cleanHboxStyles(btn_patients);
+        cleanHboxStyles(btn_watingroom);
+        cleanHboxStyles(btn_logout);
+        btn_appointments.getStyleClass().add("dash_buttons");
+     //   btn_accounting.getStyleClass().add("dash_buttons");
+        btn_home.getStyleClass().add("dash_buttons_selected");
+        btn_patients.getStyleClass().add("dash_buttons");
+        btn_watingroom.getStyleClass().add("dash_buttons");
+        btn_logout.getStyleClass().add("dash_buttons");
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("Home");
+        mainPane.setCenter(view);
+
+    }
+}
