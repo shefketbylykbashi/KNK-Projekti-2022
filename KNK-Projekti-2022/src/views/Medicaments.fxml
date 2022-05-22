@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="530.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MedicamentsController">
+   <children>
+      <TableView fx:id="table1" layoutX="29.0" layoutY="87.0" prefHeight="198.0" prefWidth="514.0">
+        <columns>
+          <TableColumn fx:id="brand_1" prefWidth="246.39996337890625" text="Brand" />
+          <TableColumn fx:id="form_1" prefWidth="158.39996337890625" text="Form" />
+            <TableColumn fx:id="dosage_1" prefWidth="113.60003662109375" text="Dosage" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search_field" layoutX="29.0" layoutY="44.0" prefHeight="31.0" prefWidth="169.0" />
+      <Button fx:id="Done_table" layoutX="687.0" layoutY="446.0" mnemonicParsing="false" onAction="#addT2todb" prefHeight="23.0" prefWidth="74.0" text="Done" />
+      <TableView fx:id="table2" layoutX="29.0" layoutY="310.0" prefHeight="162.0" prefWidth="643.0">
+        <columns>
+          <TableColumn fx:id="brand_2" prefWidth="182.4000244140625" text="Brand" />
+          <TableColumn fx:id="form_2" prefWidth="128.79998779296875" text="Form" />
+            <TableColumn fx:id="dosage_2" prefWidth="110.4000244140625" text="Dosage" />
+            <TableColumn fx:id="morning" prefWidth="76.0" text="Morning" />
+            <TableColumn fx:id="noon" prefWidth="69.5999755859375" text="Noon" />
+            <TableColumn fx:id="evening" prefWidth="72.800048828125" text="Evening" />
+        </columns>
+      </TableView>
+      <Button fx:id="Addtable" layoutX="562.0" layoutY="259.0" mnemonicParsing="false" onAction="#addItem" prefHeight="23.0" prefWidth="74.0" text="ADD" />
+   </children>
+</AnchorPane>
