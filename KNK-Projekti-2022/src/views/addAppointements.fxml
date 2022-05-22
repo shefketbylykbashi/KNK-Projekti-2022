@@ -19,7 +19,7 @@
             <TableColumn fx:id="col_bdate" prefWidth="125.0" resizable="false" text="Date Of Birth" />
         </columns>
       </TableView>
-      <ComboBox fx:id="filter" layoutX="332.0" layoutY="36.0" prefHeight="25.0" prefWidth="123.0" promptText="Ophtamologue" />
+      <ComboBox fx:id="filter" layoutX="332.0" layoutY="36.0" prefHeight="25.0" prefWidth="123.0" promptText="Select Doctor" />
       <Button fx:id="addButton" layoutX="368.0" layoutY="387.0" mnemonicParsing="false" onAction="#addAppointment" prefHeight="35.0" prefWidth="87.0" text="Confirm" />
       <Label layoutX="284.0" layoutY="39.0" prefHeight="19.0" prefWidth="43.0" text="Doctor">
          <font>
