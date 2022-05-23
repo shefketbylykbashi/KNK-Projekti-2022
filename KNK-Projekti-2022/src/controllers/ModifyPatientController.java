@@ -56,3 +56,22 @@ public class ModifyPatientController implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.WARNING, "You must enter the first name, family name and date of birth");
                 alert.showAndWait();
             }
+            else {
+
+                selectedpatient.setFirst_name(fisrt_name_txtf.getText());
+                selectedpatient.setSecond_name(second_name_txtf.getText());
+                selectedpatient.setAdr(address_txtf.getText());
+                selectedpatient.setSex(sex_combo.getValue().toString());
+                selectedpatient.setDateOfbirth(Date.valueOf(date_of_birth_dp.getValue().toString()));
+                selectedpatient.setNumber(phone_number_txtf.getText());
+                selectedpatient.modify();
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.close();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Patient added sucessfully!");
+                alert.showAndWait();
+            }
+        }
+
+
+    }
+
