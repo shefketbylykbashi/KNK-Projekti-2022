@@ -75,3 +75,16 @@ public class ModifyPatientController implements Initializable {
 
     }
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<String> sexItems = FXCollections.observableArrayList();
+        sexItems.add("M");
+        sexItems.add("F");
+        sex_combo.setItems(sexItems);
+
+        Patient patient = selectedpatient;
+        if (patient != null) {
+            fisrt_name_txtf.setText(selectedpatient.getFirst_name());
+            second_name_txtf.setText(selectedpatient.getSecond_name());
+            sex_combo.setValue(selectedpatient.getSex());
