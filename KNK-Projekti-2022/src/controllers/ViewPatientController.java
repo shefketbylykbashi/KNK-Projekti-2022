@@ -19,3 +19,18 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
+public class ViewPatientController implements Initializable {
+    @FXML
+    private TextField fisrt_name_txtf;
+    @FXML
+    private TextField second_name_txtf;
+    @FXML
+    private TextField sex_txtf;
+    @FXML
+    private DatePicker date_of_birth_dp;
+    @FXML
+    private TextField phone_number_txtf;
+    @FXML
+    private TextField address_txtf;
+    @FXML
+    private Button add_btn;
