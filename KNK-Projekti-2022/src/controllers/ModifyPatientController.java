@@ -35,3 +35,8 @@ public class ModifyPatientController implements Initializable {
     private Button add_btn;
     @FXML
     private ComboBox sex_combo;
+
+    private LocalDate myDate = LocalDate.now();
+    private Date dateSQL;
+    private String dateformat;
+    static public Patient selectedpatient;
