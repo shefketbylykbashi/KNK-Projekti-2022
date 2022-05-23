@@ -11,3 +11,11 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.Patient;
 import model.WaitingRoom;
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.ResourceBundle;
+
