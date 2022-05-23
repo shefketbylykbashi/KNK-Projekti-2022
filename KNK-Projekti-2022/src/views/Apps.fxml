@@ -33,3 +33,12 @@
             <Font size="32.0" />
          </font>
       </Label>
+<DatePicker fx:id="myDatePicker" layoutX="689.0" layoutY="105.0" onAction="#chooseDate" prefHeight="30.0" prefWidth="170.0" />
+      <Button fx:id="addNew" layoutX="742.0" layoutY="173.0" mnemonicParsing="false" onAction="#addAppointements" prefHeight="30.0" prefWidth="117.0" styleClass="appbutton" text="Add new">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="Appointments" />
+   </children>
+</AnchorPane>
