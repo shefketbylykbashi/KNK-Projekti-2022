@@ -40,3 +40,19 @@ public class ModifyPatientController implements Initializable {
     private Date dateSQL;
     private String dateformat;
     static public Patient selectedpatient;
+
+    public void modify_Patient(ActionEvent event) throws IOException {
+        Patient patient;
+
+        if (fisrt_name_txtf.getText().trim().isBlank() || second_name_txtf.getText().trim().isBlank()
+                || date_of_birth_dp == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "You must enter the first name, family name and date of birth");
+            alert.showAndWait();
+        } else {
+            myDate = date_of_birth_dp.getValue();
+            dateSQL = Date.valueOf(myDate.toString());
+            String sdate =   myDate.format(DateTimeFormatter.ofPattern("MMM-dd-yyyy"));
+            if (sdate.equals(dateformat)) {
+                Alert alert = new Alert(Alert.AlertType.WARNING, "You must enter the first name, family name and date of birth");
+                alert.showAndWait();
+            }
