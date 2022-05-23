@@ -22,3 +22,14 @@
             <TableColumn fx:id="col_phoneN" prefWidth="140.0" resizable="false" text="Phone Number" />
         </columns>
       </TableView>
+       <TextField fx:id="search" layoutX="60.0" layoutY="173.0" prefHeight="30.0" prefWidth="182.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="filter" layoutX="254.0" layoutY="173.0" onAction="#getIt" prefHeight="30.0" prefWidth="123.0" promptText="Filter" />
+      <Label fx:id="dateLabel" alignment="CENTER" layoutX="59.0" layoutY="91.0" styleClass="headlabels" text="Today's Appointments">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
