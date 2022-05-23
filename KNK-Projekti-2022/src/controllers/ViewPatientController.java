@@ -34,3 +34,8 @@ public class ViewPatientController implements Initializable {
     private TextField address_txtf;
     @FXML
     private Button add_btn;
+    
+    private LocalDate myDate = LocalDate.now();
+    private Date dateSQL;
+    private String dateformat;
+    static public Patient selectedpatient;
