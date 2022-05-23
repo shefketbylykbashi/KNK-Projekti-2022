@@ -47,7 +47,15 @@ public class ViewPatientController implements Initializable {
             fisrt_name_txtf.setText(selectedpatient.getFirst_name());
             second_name_txtf.setText(selectedpatient.getSecond_name());
             sex_txtf.setText(selectedpatient.getSex());
-            //TODO date_of_birth_dp.setValue();
             phone_number_txtf.setText(selectedpatient.getNumber());
             address_txtf.setText(selectedpatient.getAdr());
         }
+        else System.out.println("null");
+
+        myDate = LocalDate.now();
+        date_of_birth_dp.setValue(myDate);
+        dateformat = myDate.format(DateTimeFormatter.ofPattern("MMM-dd-yyyy"));
+        dateSQL = Date.valueOf(myDate.toString());
+
+    }
+}
