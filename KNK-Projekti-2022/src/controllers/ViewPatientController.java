@@ -39,3 +39,15 @@ public class ViewPatientController implements Initializable {
     private Date dateSQL;
     private String dateformat;
     static public Patient selectedpatient;
+
+     @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Patient patient = selectedpatient;
+        if (patient != null) {
+            fisrt_name_txtf.setText(selectedpatient.getFirst_name());
+            second_name_txtf.setText(selectedpatient.getSecond_name());
+            sex_txtf.setText(selectedpatient.getSex());
+            //TODO date_of_birth_dp.setValue();
+            phone_number_txtf.setText(selectedpatient.getNumber());
+            address_txtf.setText(selectedpatient.getAdr());
+        }
