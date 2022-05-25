@@ -14,31 +14,31 @@
    <children>
       <TableView fx:id="appsTable" layoutX="60.0" layoutY="206.0" prefHeight="370.0" prefWidth="800.0">
         <columns>
-          <TableColumn fx:id="col_actions" prefWidth="70.0" resizable="false" text="Actions" />
-          <TableColumn fx:id="col_fname" prefWidth="140.0" resizable="false" text="Family Name" />
-            <TableColumn fx:id="col_name" prefWidth="130.0" resizable="false" text="Name" />
-            <TableColumn fx:id="col_doc" prefWidth="135.0" resizable="false" text="Doctor" />
-            <TableColumn fx:id="col_adr" prefWidth="185.0" resizable="false" text="Address" />
-            <TableColumn fx:id="col_phoneN" prefWidth="140.0" resizable="false" text="Phone Number" />
+          <TableColumn fx:id="col_actions" prefWidth="70.0" resizable="false" text="%Actions" />
+          <TableColumn fx:id="col_fname" prefWidth="140.0" resizable="false" text="%Family Name" />
+            <TableColumn fx:id="col_name" prefWidth="130.0" resizable="false" text="%Name" />
+            <TableColumn fx:id="col_doc" prefWidth="135.0" resizable="false" text="%Doctor" />
+            <TableColumn fx:id="col_adr" prefWidth="185.0" resizable="false" text="%Address" />
+            <TableColumn fx:id="col_phoneN" prefWidth="140.0" resizable="false" text="%Phone Number" />
         </columns>
       </TableView>
-       <TextField fx:id="search" layoutX="60.0" layoutY="173.0" prefHeight="30.0" prefWidth="182.0">
+      <TextField fx:id="search" layoutX="60.0" layoutY="173.0" prefHeight="30.0" prefWidth="182.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <ComboBox fx:id="filter" layoutX="254.0" layoutY="173.0" onAction="#getIt" prefHeight="30.0" prefWidth="123.0" promptText="Filter" />
-      <Label fx:id="dateLabel" alignment="CENTER" layoutX="59.0" layoutY="91.0" styleClass="headlabels" text="Today's Appointments">
+      <ComboBox fx:id="filter" layoutX="254.0" layoutY="173.0" onAction="#getIt" prefHeight="30.0" prefWidth="123.0" promptText="%Filter" />
+      <Label fx:id="dateLabel" alignment="CENTER" layoutX="59.0" layoutY="91.0" styleClass="headlabels" text="%TodaysAppointments">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-<DatePicker fx:id="myDatePicker" layoutX="689.0" layoutY="105.0" onAction="#chooseDate" prefHeight="30.0" prefWidth="170.0" />
-      <Button fx:id="addNew" layoutX="742.0" layoutY="173.0" mnemonicParsing="false" onAction="#addAppointements" prefHeight="30.0" prefWidth="117.0" styleClass="appbutton" text="Add new">
+      <DatePicker fx:id="myDatePicker" layoutX="689.0" layoutY="105.0" onAction="#chooseDate" prefHeight="30.0" prefWidth="170.0" />
+      <Button fx:id="addNew" layoutX="742.0" layoutY="173.0" mnemonicParsing="false" onAction="#addAppointements" prefHeight="30.0" prefWidth="117.0" styleClass="appbutton" text="%AddNew">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="Appointments" />
+      <Label layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="%Appointments" />
    </children>
 </AnchorPane>
