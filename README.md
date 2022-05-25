@@ -8,7 +8,7 @@ Per realizimin e GUI eshte perdorur JavaFX, ndersa si databaze mySQL. <br/>
 
 Hapat per ekzekutimin e kodit: &nbsp;
 1.	Clone with GitSmart &nbsp;<br/>
-2.	Merrja e librarive te vecanta &nbsp;<br/>
+2.	Marrja e librarive te vecanta &nbsp;<br/>
   a. Commons-logging-1.2.jar &nbsp; <br/>
        http://www.java2s.com/Code/Jar/c/Downloadcommonslogging1211jar.htm &nbsp;<br/>
   b. Fontbox-2.0.24.jar  &nbsp;<br/>
@@ -23,7 +23,6 @@ Hapat per ekzekutimin e kodit: &nbsp;
 ![2](https://i.ibb.co/qYtBFbn/2.png)
 ![3](https://i.ibb.co/bXkxRK0/3.png)
 ![4](https://i.ibb.co/x1pxz1y/4.png)
-![5](https://i.ibb.co/qnTyFPB/5.png)
 
 ***Contributors:*** <br/>
 <ul>
