@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1080.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WaitingRoomController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1080.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersAndProcessor.WaitingRoomController">
     <children>
         <TableView fx:id="table" layoutX="60.0" layoutY="206.0" prefHeight="370.0" prefWidth="800.0">
             <columns>
@@ -36,7 +36,7 @@
             <font>
                 <Font size="14.0" />
             </font>
-        </Button>s
+        </Button>
       <Label fx:id="current" layoutX="584.0" layoutY="71.0" styleClass="medlabelpush" AnchorPane.rightAnchor="220.2181913820374">
          <font>
             <Font size="20.0" />

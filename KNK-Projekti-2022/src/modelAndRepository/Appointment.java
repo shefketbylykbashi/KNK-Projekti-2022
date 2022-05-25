@@ -1,9 +1,8 @@
-package model;
+package modelAndRepository;
 
 import database.CnxWithDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -150,10 +149,10 @@ public class Appointment {
                 int doctor_id = rs.getInt("doctor_id") ;
                 String doctor_name = "";
                 if (doctor_id == 2) {
-                    doctor_name = "Ophtamologue";
+                    doctor_name = "Endodontist";
                 }
                 if (doctor_id == 3) {
-                    doctor_name = "Remplacant";
+                    doctor_name = "Prosthetist";
                 }
                 String adr = rs.getString("adr") ;
                 String num = rs.getString("num");
@@ -204,10 +203,10 @@ public class Appointment {
                 int doctor_id = rs.getInt("doctor_id") ;
                 String doctor_name = "";
                 if (doctor_id == 2) {
-                    doctor_name = "Ophtamologue";
+                    doctor_name = "Endodontist";
                 }
                 if (doctor_id == 3) {
-                    doctor_name = "Remplacant";
+                    doctor_name = "Prosthetist";
                 }
                 String adr = rs.getString("adr") ;
                 String num = rs.getString("num");

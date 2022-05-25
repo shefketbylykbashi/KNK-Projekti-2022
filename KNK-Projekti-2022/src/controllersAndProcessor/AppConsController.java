@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import database.CnxWithDB;
 import javafx.collections.FXCollections;
@@ -13,7 +13,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import model.*;
+import modelAndRepository.*;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -23,6 +23,9 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import modelAndRepository.LocaleBundle;
+import controllersAndProcessor.LoginController;
+import processor.FxmlLoader;
 
 public class AppConsController implements Initializable {
 
@@ -118,7 +121,8 @@ public class AppConsController implements Initializable {
 
     public void View_Medicaments(MouseEvent mouseEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/Medicaments.fxml"));
+        	ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/Medicaments.fxml"),bundle);
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));

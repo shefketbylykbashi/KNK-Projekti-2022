@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
@@ -19,10 +19,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import model.Patient;
-import model.WaitingRoom;
-
-
+import modelAndRepository.Patient;
+import modelAndRepository.WaitingRoom;
+import modelAndRepository.LocaleBundle;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
@@ -30,6 +29,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
+
+import controllersAndProcessor.LoginController;
 
 public class PatientsSceneController implements Initializable {
     private Stage stage;
@@ -73,8 +74,9 @@ public class PatientsSceneController implements Initializable {
     boolean deleted=false;
 
     public void addPatient(ActionEvent event) throws IOException {
+    	ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
 
-        FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/addPatient.fxml"));
+        FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/addPatient.fxml"),bundle);
         root = (Parent) fxmlload.load();
         //any information needing to be copied to the addPatientPage;
         stage = new Stage();
@@ -150,7 +152,8 @@ public class PatientsSceneController implements Initializable {
                                 if (AppController.user_id == 2) {
                                     WaitingRoom.patientPushedFromPatientsScene = patient;
                                     Parent root = null;
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/App.fxml"));
+                                    ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/App.fxml"),bundle);
                                     try {
                                         root = loader.load();
                                     } catch (IOException e) {
@@ -168,8 +171,8 @@ public class PatientsSceneController implements Initializable {
                                 } else if (AppController.user_id == 3) {
                                     WaitingRoom.patientPushedFromPatientsScene = patient;
                                     Parent root = null;
-
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/App.fxml"));
+                                    ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/App.fxml"),bundle);
                                     try {
                                         root = loader.load();
                                     } catch (IOException e) {
@@ -186,7 +189,8 @@ public class PatientsSceneController implements Initializable {
 
                                 } else if (AppController.user_id == 1) {
                                     ViewPatientController.selectedpatient = patient;
-                                    FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/ViewPatient.fxml"));
+                                    ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
+                                    FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/ViewPatient.fxml"),bundle);
                                     try {
                                         root = (Parent) fxmlload.load();
                                     } catch (IOException e) {
@@ -211,7 +215,8 @@ public class PatientsSceneController implements Initializable {
                             }
                              else {
                             ModifyPatientController.selectedpatient = patient;
-                            FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/ModifyPatient.fxml"));
+                            ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
+                            FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/ModifyPatient.fxml"),bundle);
                             try {
                                 root = (Parent) fxmlload.load();
                             } catch (IOException e) {

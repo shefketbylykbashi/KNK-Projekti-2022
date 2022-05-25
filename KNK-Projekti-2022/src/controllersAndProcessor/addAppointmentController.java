@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,8 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import model.*;
-import model.Patient;
+import modelAndRepository.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -51,7 +50,7 @@ public class addAppointmentController implements Initializable {
     private SortedList<Patient> searchResultSortedList;
     private LocalDate myDate;
     private int mc;
-    private ObservableList<String> comboList = FXCollections.observableArrayList("Ophtamologue","Remplacant");
+    private ObservableList<String> comboList = FXCollections.observableArrayList("Endodontist","Prosthetist");
     public void getDate (LocalDate Date, int k) {
         myDate = Date;
         mc = k;
@@ -65,10 +64,10 @@ public class addAppointmentController implements Initializable {
         }
         else {
             int doc = 2;
-            if (filter.getValue() == "Ophtamologue") {
+            if (filter.getValue() == "Endodontist") {
                 doc = 2;
             }
-            else if (filter.getValue() == "Remplacant") {
+            else if (filter.getValue() == "Prosthetist") {
                 doc = 3;
             }
             if (mc == 0) {
@@ -118,6 +117,6 @@ public class addAppointmentController implements Initializable {
         col_bdate.setCellValueFactory(new PropertyValueFactory<Patient, Date>("dateOfbirth"));
         getThemAll();
         filter.setItems(comboList);
-        filter.setValue("Ophtamologue");
+        filter.setValue("Endodontist");
     }
 }

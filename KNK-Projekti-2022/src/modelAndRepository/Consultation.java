@@ -1,7 +1,6 @@
-package model;
+package modelAndRepository;
 
 import database.CnxWithDB;
-import controllers.MedicamentsController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -9,6 +8,8 @@ import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 import org.apache.pdfbox.pdmodel.interactive.form.PDTextField;
+
+import controllersAndProcessor.MedicamentsController;
 
 import java.awt.*;
 import java.io.File;
@@ -387,9 +388,9 @@ public class Consultation {
         for(int i=0;i<m.size();i++){
             String medName = m.get(i).getName();
             String   dosage = m.get(i).getDosage();
-            boolean matin = m.get(i).isMatin();
-            boolean midi = m.get(i).isMidi();
-            boolean soir = m.get(i).isSoir();
+            boolean matin = m.get(i).isMorning();
+            boolean midi = m.get(i).isNoon();
+            boolean soir = m.get(i).isEvening();
          //String medication=   generateMedicationField(medName,dosage,matin,midi,soir);
             try {
                 medication_fill(medName,dosage,matin,midi,soir,i+1);

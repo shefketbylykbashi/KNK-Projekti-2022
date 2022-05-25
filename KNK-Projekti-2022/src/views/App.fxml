@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AppController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersAndProcessor.AppController">
    <children>
       <BorderPane fx:id="mainPane" layoutX="220.0" layoutY="30.0" prefHeight="1080.0" prefWidth="1700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane fx:id="dash_pane" prefHeight="1080.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -96,7 +96,7 @@
                            <children>
                               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="file:/C:/Users/ernah/eclipse-workspace/ProjektiKNK/src/resources/LogOutlogo.png" />
+                                    <Image url="@../resources/LogOutlogo.png" />
                                  </image>
                               </ImageView>
                               <Label styleClass="dash_labels" text="%LogOut" />
@@ -108,7 +108,7 @@
             </VBox>
             <ImageView fitHeight="92.0" fitWidth="139.0" layoutX="46.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="file:/C:/Users/ernah/eclipse-workspace/ProjektiKNK/src/resources/Logo.png" />
+                  <Image url="@../resources/Logo.png" />
                </image>
             </ImageView>
          </children>

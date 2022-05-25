@@ -1,4 +1,4 @@
-package model;
+package modelAndRepository;
 
 public class MedicamentSearchResult
 {

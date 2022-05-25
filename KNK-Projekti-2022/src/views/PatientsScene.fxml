@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" onMouseMoved="#getIt" prefHeight="690.0" prefWidth="1060.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PatientsSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" onMouseMoved="#getIt" prefHeight="690.0" prefWidth="1060.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersAndProcessor.PatientsSceneController">
    <children>
       <TableView fx:id="PatientsTableView" layoutX="60.0" layoutY="232.0" prefHeight="370.0" prefWidth="800.0">
         <columns>
