@@ -13,13 +13,17 @@ Hapat per ekzekutimin e kodit: &nbsp;
        http://www.java2s.com/Code/Jar/c/Downloadcommonslogging1211jar.htm &nbsp;<br/>
   b. Fontbox-2.0.24.jar  &nbsp;<br/>
        https://jar-download.com/artifacts/org.apache.pdfbox/fontbox/2.0.24/source-code &nbsp;<br/>
-  c. Pdfbox-2.0.24.jar  &nbsp;<br/>
-       https://jar-download.com/artifacts/org.apache.pdfbox/pdfbox/2.0.24/source-code &nbsp;&nbsp;<br/>
 
 3.	Ekzekutimi i skriptes clinic_db.sql (src/database/clinic_db.sql) &nbsp;<br/>
 4.	Konfigurimi i konektimit me database ne CnxWithDB.java (src/database/ CnxWithDB.java) &nbsp;<br/>
 5.  Startimi i Window Aplikacionit. &nbsp;<br/>
 
+***Pamje nga ekzekutimi i programit***
+![1](https://i.ibb.co/wLRtXYL/1.png)
+![2](https://i.ibb.co/qYtBFbn/2.png)
+![3](https://i.ibb.co/bXkxRK0/3.png)
+![4](https://i.ibb.co/x1pxz1y/4.png)
+![5](https://i.ibb.co/qnTyFPB/5.png)
 
 ***Contributors:*** <br/>
 <ul>
