@@ -22,6 +22,7 @@ import java.net.URL;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import util.I18N;
 
 public class addAppointmentController implements Initializable {
     @FXML
@@ -55,11 +56,13 @@ public class addAppointmentController implements Initializable {
         myDate = Date;
         mc = k;
     }
+    
     public void addAppointment(ActionEvent event) throws IOException {
         Patient patient = null;
         patient = patientsTable.getSelectionModel().getSelectedItem();
         if (patient == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "No Selected Patient.");
+        
             alert.showAndWait();
         }
         else {
@@ -87,6 +90,7 @@ public class addAppointmentController implements Initializable {
 
         }
     }
+    
     public void getThemAll() {
         patientsList = Patient.search("",1);
         searchResultList = new FilteredList<>(patientsList, b -> true);
@@ -110,6 +114,7 @@ public class addAppointmentController implements Initializable {
         searchResultSortedList.comparatorProperty().bind(patientsTable.comparatorProperty());
         patientsTable.setItems(searchResultSortedList);
     }
+    
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         col_fname.setCellValueFactory(new PropertyValueFactory<Patient, String>("second_name"));

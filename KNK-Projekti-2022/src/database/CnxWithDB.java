@@ -11,10 +11,10 @@ import java.util.logging.Logger;
 
 public class CnxWithDB {
     private static final String servername = "localhost";
-    private static final Integer port = 3306;
+    private static final Integer port = 3307;
 
     private static final String username = "root";
-    private static final String password = "Onn9bhxdFIEK";
+    private static final String password = "Shefket1";
     private static String dbname = "clinic_db";
     private static MysqlDataSource dataSource = new MysqlDataSource();
 

@@ -28,14 +28,18 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Locale;
 import java.util.Random;
 import java.util.ResourceBundle;
 
 import modelAndRepository.LocaleBundle;
 
 import database.CnxWithDB;
+import util.I18N;
 
 public class LoginController {
+	
+	public static Locale l1 = Locale.ENGLISH;
     @FXML
     public AnchorPane back_pane;
     @FXML
@@ -66,16 +70,19 @@ public class LoginController {
     @FXML
     private Button Eng;
     
-    public static String lang = "en_UK" ;
+    public static String lang = "en" ;
     @FXML
     void onClickAlb(ActionEvent event) {
-    	lang = "sp_SP";
-
+    	lang = "de";
+//    	l1 =Locale.GERMAN;
+//    	switchLanguage(l1);
     }
 
     @FXML
     void onClickEng(ActionEvent event) {
-    	lang = "en_UK";
+    	lang = "en";
+    	l1 = Locale.ENGLISH;
+    	switchLanguage(l1);
 
     } 
     
@@ -160,16 +167,21 @@ public class LoginController {
         int user_id = Login.login(user, saltedHash);
         
         if (user_id == 0) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "The password entered is incorrect.");
+//            Alert alert = new Alert(Alert.AlertType.ERROR, "The password entered is incorrect.");
+        	Alert alert2 = new Alert(Alert.AlertType.ERROR);
+        	alert2.contentTextProperty().bind(I18N.createStringBinding("alert2"));
+        	alert2.titleProperty().bind(I18N.createStringBinding("alert2L"));
             password_field.setText("");
-            alert.showAndWait();
+            alert2.showAndWait();
         }
      
         else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Logged in succesfuly!");
+//            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Logged in succesfuly!");
+        	Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+        	alert1.contentTextProperty().bind(I18N.createStringBinding("alert1"));
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.close();
-            alert.showAndWait();
+            alert1.showAndWait();
             controllersAndProcessor.AppController.setUser_id(user_id);
             openAppWindow(window);
         }
@@ -206,4 +218,10 @@ public class LoginController {
         window.setResizable(a);
         window.show();
     }
+    
+    private void switchLanguage(Locale locale) {
+        
+        I18N.setLocale(locale);
+    }
 }
+
