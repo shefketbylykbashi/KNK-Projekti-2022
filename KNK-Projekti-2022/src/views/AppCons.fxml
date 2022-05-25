@@ -16,7 +16,7 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="personalInformationsLabel" alignment="CENTER" prefHeight="82.0" prefWidth="262.0" styleClass="sublabels" text="Personal Informations">
+                  <Label fx:id="personalInformationsLabel" alignment="CENTER" prefHeight="82.0" prefWidth="262.0" styleClass="sublabels" text="%PersonalInformations">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -25,25 +25,25 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Label fx:id="firstNameLabel" alignment="CENTER" prefHeight="88.0" prefWidth="68.0" styleClass="headlabels" text="First Name" />
+                  <Label fx:id="firstNameLabel" alignment="CENTER" prefHeight="88.0" prefWidth="68.0" styleClass="headlabels" text="%FirstName" />
                   <TextField fx:id="sName" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="76.0" prefWidth="271.0" spacing="20.0">
                <children>
-                  <Label fx:id="secondNameLabel" alignment="CENTER" prefHeight="57.0" prefWidth="78.0" styleClass="headlabels" text="Second Name" />
+                  <Label fx:id="secondNameLabel" alignment="CENTER" prefHeight="57.0" prefWidth="78.0" styleClass="headlabels" text="%SecondName" />
                   <TextField fx:id="sFameName" prefHeight="27.0" prefWidth="163.0" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Label fx:id="sexLabel" prefHeight="57.0" prefWidth="71.0" styleClass="headlabels" text="Sex" />
+                  <Label fx:id="sexLabel" prefHeight="57.0" prefWidth="71.0" styleClass="headlabels" text="%Sex" />
                   <TextField fx:id="sSex" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Label fx:id="ageLabel" prefHeight="54.0" prefWidth="74.0" styleClass="headlabels" text="Age" />
+                  <Label fx:id="ageLabel" prefHeight="54.0" prefWidth="74.0" styleClass="headlabels" text="%Age" />
                   <TextField fx:id="sAge" />
                </children>
             </HBox>
@@ -53,7 +53,7 @@
             <children>
                 <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="consultationInformationsLabel" alignment="CENTER" prefHeight="82.0" prefWidth="262.0" styleClass="sublabels" text="Consultation Infromations">
+                  <Label fx:id="consultationInformationsLabel" alignment="CENTER" prefHeight="82.0" prefWidth="262.0" styleClass="sublabels" text="%ConsultationInfromations">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -62,31 +62,31 @@
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                     <children>
-                        <Label fx:id="heightLabel" alignment="CENTER" prefHeight="88.0" prefWidth="68.0" styleClass="headlabels" text="Height" />
+                        <Label fx:id="heightLabel" alignment="CENTER" prefHeight="88.0" prefWidth="68.0" styleClass="headlabels" text="%Height" />
                   <TextField fx:id="height" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                     <children>
-                        <Label fx:id="weightLabel" alignment="CENTER" prefHeight="88.0" prefWidth="55.0" styleClass="headlabels" text="Weight" />
+                        <Label fx:id="weightLabel" alignment="CENTER" prefHeight="88.0" prefWidth="55.0" styleClass="headlabels" text="%Weight" />
                   <TextField fx:id="weight" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                     <children>
-                        <Label fx:id="blood_pressureLabel" prefHeight="57.0" prefWidth="88.0" styleClass="headlabels" text="Blood pressure" />
+                        <Label fx:id="blood_pressureLabel" prefHeight="57.0" prefWidth="88.0" styleClass="headlabels" text="%Blood pressure" />
                   <TextField fx:id="blood_pressure" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                     <children>
-                        <Label fx:id="blood_gluLabel" prefHeight="57.0" prefWidth="71.0" styleClass="headlabels" text="Blood glu" />
+                        <Label fx:id="blood_gluLabel" prefHeight="57.0" prefWidth="71.0" styleClass="headlabels" text="%BloodGlu" />
                   <TextField fx:id="blood_glu" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                     <children>
-                        <Label fx:id="temperatureLabel" prefHeight="54.0" prefWidth="74.0" styleClass="headlabels" text="Temperature" />
+                        <Label fx:id="temperatureLabel" prefHeight="54.0" prefWidth="74.0" styleClass="headlabels" text="%Temperature" />
                   <TextField fx:id="tomperature" />
                     </children>
                 </HBox>
@@ -96,25 +96,25 @@
          <children>
             <TableView fx:id="history" onMouseClicked="#showinfos" prefHeight="260.0" prefWidth="310.0">
                <columns>
-                  <TableColumn fx:id="consultations" prefWidth="300.7999267578125" text="Consultations History" />
+                  <TableColumn fx:id="consultations" prefWidth="300.7999267578125" text="%ConsultationsHistory" />
                </columns>
             </TableView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="811.0" layoutY="434.0" prefHeight="137.0" prefWidth="204.0">
          <children>
-            <Button fx:id="save_New" layoutX="16.0" layoutY="119.0" mnemonicParsing="false" onAction="#saveNewValue" prefHeight="25.0" prefWidth="160.0" styleClass="appbutton" text="Save Consultation" />
-            <Button fx:id="View_Medicaments" layoutX="16.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#View_Medicaments" prefHeight="25.0" prefWidth="160.0" styleClass="appbutton" text="Show Medicaments" />
-            <Button fx:id="new_consultation" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#addinfos" prefHeight="25.0" prefWidth="160.0" styleClass="appbutton" text="New Consultation" />
-            <Button fx:id="prescription" layoutX="15.0" layoutY="153.0" mnemonicParsing="false" onAction="#addinfos" prefHeight="25.0" prefWidth="160.0" styleClass="appbutton" text="Prescription" />
+            <Button fx:id="save_New" layoutX="16.0" layoutY="119.0" mnemonicParsing="false" onAction="#saveNewValue" prefHeight="25.0" prefWidth="160.0" styleClass="appbutton" text="%Save Consultation" />
+            <Button fx:id="View_Medicaments" layoutX="16.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#View_Medicaments" prefHeight="25.0" prefWidth="160.0" styleClass="appbutton" text="%Show Medicaments" />
+            <Button fx:id="new_consultation" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#addinfos" prefHeight="25.0" prefWidth="160.0" styleClass="appbutton" text="%New Consultation" />
+            <Button fx:id="prescription" layoutX="15.0" layoutY="153.0" mnemonicParsing="false" onAction="#addinfos" prefHeight="25.0" prefWidth="160.0" styleClass="appbutton" text="%Prescription" />
          </children>
       </AnchorPane>
-      <Label fx:id="emptyLabel" layoutX="368.0" layoutY="43.0" styleClass="headlabels" text="There is no current patient.">
+      <Label fx:id="emptyLabel" layoutX="368.0" layoutY="43.0" styleClass="headlabels" text="%ThereIsNoCurrentPatient.">
          <font>
             <Font name="Poppins Bold" size="25.0" />
          </font>
       </Label>
-      <Button fx:id="refresh" layoutX="60.0" layoutY="567.0" mnemonicParsing="false" onAction="#refresh" prefHeight="36.0" prefWidth="62.0" styleClass="appbutton" text="Refresh" />
-      <Label layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="Consultation" />
+      <Button fx:id="refresh" layoutX="60.0" layoutY="567.0" mnemonicParsing="false" onAction="#refresh" prefHeight="36.0" prefWidth="62.0" styleClass="appbutton" text="%Refresh" />
+      <Label layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="%Consultation" />
     </children>
 </AnchorPane>
