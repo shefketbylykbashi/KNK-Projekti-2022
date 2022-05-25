@@ -71,7 +71,7 @@
                                     <Image url="@../resources/Consultationlogo.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="dash_labels" text="Consultation"> </Label>
+                              <Label styleClass="dash_labels" text="%Consultation"> </Label>
                            </children>
                         </HBox>
                      </graphic>

@@ -74,7 +74,7 @@
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                     <children>
-                        <Label fx:id="blood_pressureLabel" prefHeight="57.0" prefWidth="88.0" styleClass="headlabels" text="%Blood pressure" />
+                        <Label fx:id="blood_pressureLabel" prefHeight="57.0" prefWidth="88.0" styleClass="headlabels" text="%BloodPressure" />
                   <TextField fx:id="blood_pressure" />
                     </children>
                 </HBox>

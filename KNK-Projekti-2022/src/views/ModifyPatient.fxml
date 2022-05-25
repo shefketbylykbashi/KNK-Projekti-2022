@@ -64,7 +64,7 @@
                         </HBox>
                         <HBox prefHeight="16.0" prefWidth="200.0" spacing="32.0">
                             <children>
-                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="%Date of birth*">
+                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="%DateOfBirth">
                                     <font>
                                         <Font size="13.0" />
                                     </font>

@@ -15,11 +15,11 @@
       <TableView fx:id="appsTable" layoutX="60.0" layoutY="206.0" prefHeight="370.0" prefWidth="800.0">
         <columns>
           <TableColumn fx:id="col_actions" prefWidth="70.0" resizable="false" text="%Actions" />
-          <TableColumn fx:id="col_fname" prefWidth="140.0" resizable="false" text="%Family Name" />
+          <TableColumn fx:id="col_fname" prefWidth="140.0" resizable="false" text="%FamilyName" />
             <TableColumn fx:id="col_name" prefWidth="130.0" resizable="false" text="%Name" />
             <TableColumn fx:id="col_doc" prefWidth="135.0" resizable="false" text="%Doctor" />
             <TableColumn fx:id="col_adr" prefWidth="185.0" resizable="false" text="%Address" />
-            <TableColumn fx:id="col_phoneN" prefWidth="140.0" resizable="false" text="%Phone Number" />
+            <TableColumn fx:id="col_phoneN" prefWidth="140.0" resizable="false" text="%PhoneNumber" />
         </columns>
       </TableView>
       <TextField fx:id="search" layoutX="60.0" layoutY="173.0" prefHeight="30.0" prefWidth="182.0">
