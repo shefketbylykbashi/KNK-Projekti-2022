@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,8 +8,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import model.Patient;
-import model.WaitingRoom;
+import modelAndRepository.Patient;
+import modelAndRepository.WaitingRoom;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;

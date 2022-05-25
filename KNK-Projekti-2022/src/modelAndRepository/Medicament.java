@@ -1,4 +1,4 @@
-package model;
+package modelAndRepository;
 
 import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import database.CnxWithDB;

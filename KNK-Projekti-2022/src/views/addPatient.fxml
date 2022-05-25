@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddPatientController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersAndProcessor.AddPatientController">
    <children>
       <AnchorPane layoutX="133.0" layoutY="110.0" prefHeight="243.0" prefWidth="334.0" styleClass="Elementpane">
          <children>
@@ -113,7 +113,7 @@
             </VBox>
          </children>
       </AnchorPane>
-      <Text fill="#545454" fontSmoothingType="LCD" layoutX="140.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%AddNewPatient:" wrappingWidth="234.61188125610352">
+      <Text fill="#545454" fontSmoothingType="LCD" layoutX="140.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%AddNewPatient" wrappingWidth="234.61188125610352">
          <font>
             <Font size="20.0" />
          </font>

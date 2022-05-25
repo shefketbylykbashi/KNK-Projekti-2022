@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -9,7 +9,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
-import model.Patient;
+import modelAndRepository.Patient;
 
 import java.net.URL;
 import java.sql.Connection;

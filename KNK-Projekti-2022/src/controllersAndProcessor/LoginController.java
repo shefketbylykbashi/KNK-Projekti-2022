@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,8 +16,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
-import model.Appointment;
-import model.Login;
+import modelAndRepository.Appointment;
+import modelAndRepository.Login;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -28,6 +29,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
+import java.util.ResourceBundle;
+
+import modelAndRepository.LocaleBundle;
 
 import database.CnxWithDB;
 
@@ -54,6 +58,27 @@ public class LoginController {
     public PasswordField password_field;
     @FXML
     public Button submit_button;
+    
+    
+    @FXML
+    private Button Alb;
+
+    @FXML
+    private Button Eng;
+    
+    public static String lang = "en_UK" ;
+    @FXML
+    void onClickAlb(ActionEvent event) {
+    	lang = "sp_SP";
+
+    }
+
+    @FXML
+    void onClickEng(ActionEvent event) {
+    	lang = "en_UK";
+
+    } 
+    
     @FXML
     public Label invisibleUsernameLabel;
     public void user_button_1OnAction(ActionEvent event) {
@@ -85,7 +110,7 @@ public class LoginController {
     }
 
     public void back_paneOnMouseMoved(MouseEvent event) {
-        model.Login.initUsernameButtons(user_button_1, user_button_2, user_button_3);
+        modelAndRepository.Login.initUsernameButtons(user_button_1, user_button_2, user_button_3);
     }
     
     private static String bytesToHex(byte[] hash) {
@@ -145,7 +170,7 @@ public class LoginController {
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.close();
             alert.showAndWait();
-            controllers.AppController.setUser_id(user_id);
+            controllersAndProcessor.AppController.setUser_id(user_id);
             openAppWindow(window);
         }
     }
@@ -159,13 +184,15 @@ public class LoginController {
         int x,y;
         boolean a=false;
         if (AppController.user_id == 1) {
-            appParent = FXMLLoader.load(getClass().getResource("/views/AppAssist.fxml"));
+        	ResourceBundle bundle =  LocaleBundle.bundle(lang);
+            appParent = FXMLLoader.load(getClass().getResource("/views/AppAssist.fxml"),bundle);
             x=1280;
             y=720;
             a=true;
 
         } else  {
-            appParent = FXMLLoader.load(getClass().getResource("/views/SplashScreen.fxml"));
+        	ResourceBundle bundle =  LocaleBundle.bundle(lang);
+            appParent = FXMLLoader.load(getClass().getResource("/views/SplashScreen.fxml"),bundle);
             x=600;
             y=400;
         }

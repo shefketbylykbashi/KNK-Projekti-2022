@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,12 +12,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import processor.FxmlLoader;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import application.FxmlLoader;
 
 public class AppController implements Initializable {
     @FXML

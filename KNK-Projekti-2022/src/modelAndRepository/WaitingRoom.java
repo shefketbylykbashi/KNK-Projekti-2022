@@ -1,13 +1,14 @@
-package model;
+package modelAndRepository;
 
 
 import database.CnxWithDB;
-import controllers.AppController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.*;
 import java.time.LocalDate;
+
+import controllersAndProcessor.AppController;
 
 public class WaitingRoom {
     private Date todayDate;
@@ -229,6 +230,11 @@ public class WaitingRoom {
 
         }
     }
+    
+    public void initialize(){
+        //    clear();
+      //      update();
+        }
 
 
     static public int getCurrentPatientIdFromDB(int doctor_id){

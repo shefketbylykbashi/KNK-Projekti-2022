@@ -1,9 +1,8 @@
-package model;
+package modelAndRepository;
 
 import database.CnxWithDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

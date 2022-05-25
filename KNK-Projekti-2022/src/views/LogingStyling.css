@@ -72,6 +72,99 @@ Label {
 
 }
 
+#Eng {
+    -fx-background-radius: 31;
+    -fx-font-size: 16.0;
+    -fx-font-family: 'Poppins Regular';
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(from 0% 150% to 0% -50%, rgba(127,187,248,0.86),rgba(184,255,236,0.73));
+    -fx-border-width: 0px;
+    -fx-border-color: rgba(86, 86, 86, 0.7);
+    -fx-pref-height: 28px;
+    -fx-pref-width: 70px;
+    -fx-padding: 1px;
+    -fx-graphic-text-gap: 0px;
+    -fx-effect: dropshadow(gaussian, rgba(127,139,232,0.3) ,16,0.1,0,4);
+      }
+    
+#Eng:hover {
+        -fx-background-radius: 31;
+        -fx-font-size: 16.0;
+        -fx-font-family: 'Poppins Regular';
+        -fx-text-fill: rgba(86, 86, 86, 0.7);
+        -fx-background-color: linear-gradient(from 0% 150% to 0% -50%, rgba(127,187,248,0.86),rgba(184,255,236,0.73));
+        -fx-border-width: 0px;
+        -fx-border-color: rgba(86, 86, 86, 0.7);
+        -fx-pref-height: 34px;
+        -fx-pref-width: 80px;
+        -fx-padding: 1px;
+        -fx-graphic-text-gap: 0px;
+        -fx-effect: dropshadow(gaussian, rgba(127,139,232,0.3) ,16,0.1,0,4);
+    
+    }
+#Eng:armed {
+        -fx-background-radius: 31;
+        -fx-font-size: 16.0;
+        -fx-font-family: 'Poppins Regular';
+        -fx-text-fill: rgba(86, 86, 86, 0.7);
+        -fx-background-color: linear-gradient(from 0% 150% to 0% -50%, rgba(107,167,228,0.86),rgba(124,235,216,0.73));
+        -fx-border-width: 0px;
+        -fx-border-color: black;
+        -fx-pref-height: 34px;
+        -fx-pref-width: 80px;
+        -fx-padding: 1px;
+        -fx-graphic-text-gap: 0px;
+        -fx-effect: dropshadow(gaussian, rgba(127,139,232,0.3) ,16,0.1,0,4);
+    
+    }
+
+
+#Alb {
+        -fx-background-radius: 31;
+        -fx-font-size: 16.0;
+        -fx-font-family: 'Poppins Regular';
+        -fx-text-fill: #ffffff;
+        -fx-background-color: linear-gradient(from 0% 150% to 0% -50%, rgba(127,187,248,0.86),rgba(184,255,236,0.73));
+        -fx-border-width: 0px;
+        -fx-border-color: rgba(86, 86, 86, 0.7);
+        -fx-pref-height: 28px;
+        -fx-pref-width: 70px;
+        -fx-padding: 1px;
+        -fx-graphic-text-gap: 0px;
+        -fx-effect: dropshadow(gaussian, rgba(127,139,232,0.3) ,16,0.1,0,4);
+        
+        }
+#Alb:hover {
+            -fx-background-radius: 31;
+            -fx-font-size: 16.0;
+            -fx-font-family: 'Poppins Regular';
+            -fx-text-fill: rgba(86, 86, 86, 0.7);
+            -fx-background-color: linear-gradient(from 0% 150% to 0% -50%, rgba(127,187,248,0.86),rgba(184,255,236,0.73));
+            -fx-border-width: 0px;
+            -fx-border-color: rgba(86, 86, 86, 0.7);
+            -fx-pref-height: 34px;
+            -fx-pref-width: 80px;
+            -fx-padding: 1px;
+            -fx-graphic-text-gap: 0px;
+            -fx-effect: dropshadow(gaussian, rgba(127,139,232,0.3) ,16,0.1,0,4);
+        
+        }
+#Alb:armed {
+            -fx-background-radius: 31;
+            -fx-font-size: 16.0;
+            -fx-font-family: 'Poppins Regular';
+            -fx-text-fill: rgba(86, 86, 86, 0.7);
+            -fx-background-color: linear-gradient(from 0% 150% to 0% -50%, rgba(107,167,228,0.86),rgba(124,235,216,0.73));
+            -fx-border-width: 0px;
+            -fx-border-color: black;
+            -fx-pref-height: 34px;
+            -fx-pref-width: 80px;
+            -fx-padding: 1px;
+            -fx-graphic-text-gap: 0px;
+            -fx-effect: dropshadow(gaussian, rgba(127,139,232,0.3) ,16,0.1,0,4);
+        
+        }
+
 .textlabel {
 -fx-font-family: 'Poppins Regular';
 -fx-font-size: 21.0;

@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -18,8 +18,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import model.Appointment;
-import model.AppointmentSearchResult;
+import modelAndRepository.LocaleBundle;
+import modelAndRepository.Appointment;
+import modelAndRepository.AppointmentSearchResult;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,6 +30,8 @@ import java.sql.Date;
 import java.util.LinkedHashSet;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
+
+import controllersAndProcessor.LoginController;
 
 public class AppointementsController implements Initializable {
     private Stage stage;
@@ -71,7 +74,8 @@ public class AppointementsController implements Initializable {
 
     public void addAppointements(ActionEvent event) throws IOException {
         addNew.setDisable(true);
-        FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/addAppointements.fxml"));
+        ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
+        FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/addAppointements.fxml"),bundle);
         root = (Parent) fxmlload.load();
         addAppointmentController addAppointmentController = fxmlload.getController();
         addAppointmentController.getDate(myDate,0);

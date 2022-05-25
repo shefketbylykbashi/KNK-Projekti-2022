@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -17,10 +17,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import model.Appointment;
-import model.AppointmentSearchResult;
-import model.WaitingRoom;
-
+import modelAndRepository.Appointment;
+import modelAndRepository.AppointmentSearchResult;
+import modelAndRepository.WaitingRoom;
+import modelAndRepository.LocaleBundle;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -76,7 +76,8 @@ public class WaitingRoomController implements Initializable {
 
     public void addAppointements(ActionEvent event) throws IOException {
         add.setDisable(true);
-        FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/addAppointements.fxml"));
+        ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
+        FXMLLoader fxmlload = new FXMLLoader(getClass().getResource("/views/addAppointements.fxml"),bundle);
         root = (Parent) fxmlload.load();
         addAppointmentController addAppointmentController = fxmlload.getController();
         addAppointmentController.getDate(null,1);

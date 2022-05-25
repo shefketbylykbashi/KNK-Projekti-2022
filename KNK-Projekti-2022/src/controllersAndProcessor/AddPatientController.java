@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -12,7 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import model.Patient;
+import modelAndRepository.Patient;
 
 import java.io.IOException;
 import java.net.URL;

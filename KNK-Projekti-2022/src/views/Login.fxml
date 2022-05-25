@@ -7,18 +7,19 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="back_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#back_paneOnMouseMoved" prefHeight="720.0" prefWidth="1280.0" stylesheets="@LogingStyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane fx:id="back_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#back_paneOnMouseMoved" prefHeight="720.0" prefWidth="1280.0" stylesheets="@LogingStyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersAndProcessor.LoginController">
    <children>
       <AnchorPane fx:id="left_pane" prefHeight="200.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane layoutX="480.0" layoutY="125.0" prefHeight="720.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="invisibleUsernameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="392.0" prefHeight="31.0" prefWidth="776.0" styleClass="textlabel" text="%Username" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+            <Label fx:id="invisibleUsernameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="392.0" prefHeight="31.0" prefWidth="776.0" styleClass="textlabel" text="Username" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
          </children>
       </AnchorPane>
       <Circle fx:id="back_circle" centerX="1180.0" centerY="374.0" radius="540.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Circle">
@@ -39,12 +40,12 @@
             </LinearGradient>
          </fill>
       </Circle>
-      <Label fx:id="select_user_label" layoutX="819.0" layoutY="222.0" styleClass="textlabel" text="%Select User:" textFill="#5e5656">
+      <Label fx:id="select_user_label" layoutX="808.0" layoutY="224.0" styleClass="textlabel" text="Select User:" textFill="#5e5656">
          <font>
             <Font name="Poppins Regular" size="21.0" />
          </font>
       </Label>
-      <Button fx:id="user_button_1" layoutX="808.0" layoutY="262.0" mnemonicParsing="false" onAction="#user_button_1OnAction" prefHeight="32.0" prefWidth="145.0" text="%Username" textAlignment="CENTER">
+      <Button fx:id="user_button_1" layoutX="801.0" layoutY="262.0" mnemonicParsing="false" onAction="#user_button_1OnAction" prefHeight="32.0" prefWidth="160.0" text="Username" textAlignment="CENTER">
          <font>
             <Font name="Poppins Regular" size="21.218181610107422" />
          </font>
@@ -54,7 +55,7 @@
             <String fx:value="userbutton" />
          </styleClass>
       </Button>
-      <Button fx:id="user_button_2" layoutX="808.0" layoutY="307.0" mnemonicParsing="false" onAction="#user_button_2OnAction" prefHeight="32.0" prefWidth="145.0" text="%Username" textAlignment="CENTER">
+      <Button fx:id="user_button_2" layoutX="801.0" layoutY="307.0" mnemonicParsing="false" onAction="#user_button_2OnAction" prefHeight="32.0" prefWidth="160.0" text="Username" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="21.218181610107422" />
          </font>
@@ -64,20 +65,20 @@
             <String fx:value="userbutton" />
          </styleClass>
       </Button>
-      <Label fx:id="login_label" alignment="CENTER" contentDisplay="CENTER" layoutX="805.0" layoutY="111.0" prefHeight="53.0" prefWidth="151.0" text="%Login" textFill="#6a6464">
+      <Label fx:id="login_label" alignment="CENTER" contentDisplay="CENTER" layoutX="805.0" layoutY="111.0" prefHeight="53.0" prefWidth="151.0" text="Login" textFill="#6a6464">
          <font>
             <Font name="Righteous" size="59.0" />
          </font>
       </Label>
-      <Button fx:id="user_button_3" layoutX="808.0" layoutY="352.0" mnemonicParsing="false" onAction="#user_button_3OnAction" text="%Username">
+      <Button fx:id="user_button_3" layoutX="801.0" layoutY="352.0" mnemonicParsing="false" onAction="#user_button_3OnAction" prefWidth="160.0" text="Username">
          <styleClass>
             <String fx:value="userButton" />
             <String fx:value="userbutton" />
          </styleClass>
       </Button>
-      <Label fx:id="password_label" layoutX="827.0" layoutY="422.0" styleClass="textlabel" text="%Password:" />
-      <PasswordField fx:id="password_field" alignment="CENTER" layoutX="808.0" layoutY="461.0" promptText="%Password" styleClass="passwordfield" />
-      <Button fx:id="submit_button" layoutX="833.0" layoutY="522.0" mnemonicParsing="false" onAction="#submit_buttonOnAction" text="%Submit" />
+      <Label fx:id="password_label" layoutX="827.0" layoutY="422.0" styleClass="textlabel" text="Password:" />
+      <PasswordField fx:id="password_field" alignment="CENTER" layoutX="808.0" layoutY="461.0" promptText="Password" styleClass="passwordfield" />
+      <Button fx:id="submit_button" layoutX="833.0" layoutY="522.0" mnemonicParsing="false" onAction="#submit_buttonOnAction" text="Submit" />
       <ImageView fitHeight="418.0" fitWidth="335.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
          <image>
             <Image url="@../resources/Intersection%203Q.png" />
@@ -90,8 +91,15 @@
       </ImageView>
       <ImageView fitHeight="149.0" fitWidth="231.0" layoutX="126.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:/C:/Users/ernah/eclipse-workspace/ProjektiKNK/src/resources/Logo.png" />
+            <Image url="@../resources/Logo.png" />
          </image>
       </ImageView>
+      <HBox layoutX="1046.0" layoutY="30.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="Eng" mnemonicParsing="false" onAction="#onClickEng" text="Eng" />
+            <Button fx:id="Alb" mnemonicParsing="false" onAction="#onClickAlb" text="Alb" />
+         </children>
+      </HBox>
+      <Label layoutX="880.0" layoutY="30.0" text="Select language:" />
    </children>
 </AnchorPane>

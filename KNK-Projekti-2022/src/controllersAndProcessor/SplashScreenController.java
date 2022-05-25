@@ -1,4 +1,4 @@
-package controllers;
+package controllersAndProcessor;
 
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
@@ -17,7 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import modelAndRepository.LocaleBundle;
 public class SplashScreenController implements Initializable {
     @FXML
     private StackPane rootPane;
@@ -48,7 +48,8 @@ public class SplashScreenController implements Initializable {
                     @Override
                     public void handle(WorkerStateEvent t) {
                         try {
-                            Parent appParent = FXMLLoader.load(getClass().getResource("/views/App.fxml"));
+                        	ResourceBundle bundle =  LocaleBundle.bundle(LoginController.lang);
+                            Parent appParent = FXMLLoader.load(getClass().getResource("/views/App.fxml"),bundle);
                             Scene appScene = new Scene(appParent, 1280, 720);
                             appScene.getStylesheets().add(getClass().getResource("/views/AppStyling.css").toExternalForm());
                             Stage window = new Stage();

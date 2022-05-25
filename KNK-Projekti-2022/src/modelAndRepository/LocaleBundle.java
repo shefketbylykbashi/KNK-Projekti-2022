@@ -1,4 +1,4 @@
-package model;
+package modelAndRepository;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

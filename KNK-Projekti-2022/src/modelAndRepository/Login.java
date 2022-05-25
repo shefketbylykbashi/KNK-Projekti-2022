@@ -1,13 +1,14 @@
-package model;
+package modelAndRepository;
 
 import database.CnxWithDB;
-import controllers.HomeController;
 import javafx.scene.control.Button;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import controllersAndProcessor.HomeController;
 
 
 
