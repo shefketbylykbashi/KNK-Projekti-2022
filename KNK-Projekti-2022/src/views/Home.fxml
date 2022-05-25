@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -7,13 +10,21 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="690.0" prefWidth="1060.0" stylesheets="@AppStyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <children>
-      <TextArea disable="true" layoutX="60.0" layoutY="101.0" prefHeight="117.0" prefWidth="249.0" text="Receptionist can: &#10;- view statistics,&#10;- add/remove patients from Waiting Room,&#10;- register/edit/delete patients,&#10;- make/delete appointments&#10;" />
-      <Label fx:id="assitfullname" layoutX="60.0" layoutY="65.0" prefHeight="34.0" prefWidth="126.0" styleClass="headlabels" text="ASSIT FULL NAME" />
-      <Label fx:id="med2fullname" layoutX="761.0" layoutY="65.0" prefHeight="34.0" prefWidth="126.0" styleClass="headlabels" text="MED 2 FULL NAME" />
-      <Label fx:id="med1fullname" layoutX="417.0" layoutY="65.0" prefHeight="34.0" prefWidth="126.0" styleClass="headlabels" text="MED 1 FULL NAME" />
+      <TextArea disable="true" layoutX="60.0" layoutY="101.0" prefHeight="117.0" prefWidth="249.0" text="%Receptionist can: &#10;- view statistics,&#10;- add/remove patients from Waiting Room,&#10;- register/edit/delete patients,&#10;- make/delete appointments&#10;" />
+      <Label fx:id="assitfullname" layoutX="60.0" layoutY="65.0" prefHeight="34.0" prefWidth="126.0" styleClass="headlabels" text="%ASSITFULLNAME" />
+      <Label fx:id="med2fullname" layoutX="761.0" layoutY="65.0" prefHeight="34.0" prefWidth="126.0" styleClass="headlabels" text="%MED2FULLNAME" />
+      <Label fx:id="med1fullname" layoutX="417.0" layoutY="65.0" prefHeight="34.0" prefWidth="126.0" styleClass="headlabels" text="%MED1FULLNAME" />
       <Label layoutX="59.0" layoutY="10.0" prefHeight="34.0" prefWidth="168.0" styleClass="PanelHead" text="Home" AnchorPane.leftAnchor="59.0" />
-      <PieChart fx:id="pieChart" layoutX="334.0" layoutY="273.0" opacity="0.75" prefHeight="382.0" prefWidth="393.0" title="APPOINTMENTS  THROUGHOUT  THE  YEAR" />
-      <TextArea disable="true" layoutX="417.0" layoutY="102.0" prefHeight="117.0" prefWidth="267.0" text="Specialist of Endodoncy can:&#10;- view statistics,&#10;- add/remove patients from Waiting Room,&#10;- add consultations/prescriptions,&#10;- register/edit/delete patients,&#10;- make/delete appointments" />
-      <TextArea disable="true" layoutX="761.0" layoutY="102.0" prefHeight="117.0" prefWidth="267.0" text="Specialist of Prothetics can:&#10;- view statistics,&#10;- add/remove patients from Waiting Room,&#10;- add consultations/prescriptions,&#10;- register/edit/delete patients,&#10;- make/delete appointments" />
+      <PieChart fx:id="pieChart" layoutX="113.0" layoutY="275.0" opacity="0.75" prefHeight="382.0" prefWidth="393.0" title="%APPOINTMENTSTHROUGHOUTTHEYEAR" />
+      <TextArea disable="true" layoutX="417.0" layoutY="102.0" prefHeight="117.0" prefWidth="267.0" text="%SpecialistEndodoncy" />
+      <TextArea disable="true" layoutX="761.0" layoutY="102.0" prefHeight="117.0" prefWidth="267.0" text="%SpecialistProsthetist" />
+      <LineChart fx:id="lineChart" layoutX="511.0" layoutY="275.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
    </children>
 </AnchorPane>
