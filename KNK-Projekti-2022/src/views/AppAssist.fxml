@@ -15,7 +15,7 @@
         <BorderPane fx:id="mainPane" layoutX="220.0" layoutY="30.0" prefHeight="1080.0" prefWidth="1700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
         <AnchorPane fx:id="dash_pane" prefHeight="1080.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <VBox fx:id="vb_dashboard" layoutY="85.0" prefHeight="880.0" prefWidth="220.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+                <VBox fx:id="vb_dashboard" layoutY="85.0" prefHeight="880.0" prefWidth="220.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
                     <children>
                         <Button fx:id="btn_home" mnemonicParsing="false" onAction="#loadHomePage" prefHeight="35.0" prefWidth="239.0" styleClass="dash_buttons">
                             <graphic>
@@ -29,7 +29,7 @@
                                                 <Image url="@../resources/Homelogo.png" />
                                             </image>
                                         </ImageView>
-                                        <Label fx:id="lab_home" alignment="BASELINE_LEFT" styleClass="dash_labels" text="Home" />
+                                        <Label fx:id="lab_home" alignment="BASELINE_LEFT" styleClass="dash_labels" text="%Home" />
                                     </children>
                                 </HBox>
                             </graphic>
@@ -43,7 +43,7 @@
                                                 <Image url="@../resources/Waitlogo.png" />
                                             </image>
                                         </ImageView>
-                                        <Label styleClass="dash_labels" text="Waiting Room"> </Label>
+                                        <Label styleClass="dash_labels" text="%WaitingRoom"> </Label>
                                     </children>
                                 </HBox>
                             </graphic>
@@ -57,7 +57,7 @@
                                                 <Image url="@../resources/Patientslogo.png" />
                                             </image>
                                         </ImageView>
-                                        <Label styleClass="dash_labels" text="Patients"> </Label>
+                                        <Label styleClass="dash_labels" text="%Patients"> </Label>
                                     </children>
                                 </HBox>
                             </graphic>
@@ -71,7 +71,7 @@
                                                 <Image url="@../resources/Appointmentslogo.png" />
                                             </image>
                                         </ImageView>
-                                        <Label styleClass="dash_labels" text="Appointments"> </Label>
+                                        <Label styleClass="dash_labels" text="%Appointments"> </Label>
                                     </children>
                                 </HBox>
                             </graphic>
@@ -85,16 +85,16 @@
                                     <Image url="file:/C:/Users/ernah/eclipse-workspace/ProjektiKNK/src/resources/LogOutlogo.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="dash_labels" text="Log Out" />
+                              <Label styleClass="dash_labels" text="%LogOut" />
                            </children>
                         </HBox>
                      </graphic>
                   </Button>
                     </children>
                 </VBox>
-                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="102.0" fitWidth="155.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../resources/Logo.png" />
+                        <Image url="file:/C:/Users/ernah/eclipse-workspace/ProjektiKNK/src/resources/Logo.png" />
                     </image>
                 </ImageView>
             </children>

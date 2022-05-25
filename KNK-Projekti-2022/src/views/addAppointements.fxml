@@ -11,17 +11,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth=" -Infinity" prefHeight="479.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.addAppointmentController">
    <children>
-      <TextField fx:id="search" layoutX="25.0" layoutY="36.0" prefHeight="25.0" prefWidth="135.0" promptText="Search" />
+      <TextField fx:id="search" layoutX="25.0" layoutY="36.0" prefHeight="25.0" prefWidth="135.0" promptText="%Search" />
       <TableView fx:id="patientsTable" layoutX="25.0" layoutY="64.0" prefHeight="300.0" prefWidth="430.0">
         <columns>
-          <TableColumn fx:id="col_fname" prefWidth="135.0" resizable="false" text="Family Name" />
-          <TableColumn fx:id="col_name" prefWidth="170.0" resizable="false" text="Name" />
-            <TableColumn fx:id="col_bdate" prefWidth="125.0" resizable="false" text="Date Of Birth" />
+          <TableColumn fx:id="col_fname" prefWidth="135.0" resizable="false" text="%FamilyName" />
+          <TableColumn fx:id="col_name" prefWidth="170.0" resizable="false" text="%Name" />
+            <TableColumn fx:id="col_bdate" prefWidth="125.0" resizable="false" text="%DateOfBirth" />
         </columns>
       </TableView>
-      <ComboBox fx:id="filter" layoutX="332.0" layoutY="36.0" prefHeight="25.0" prefWidth="123.0" promptText="Select Doctor" />
-      <Button fx:id="addButton" layoutX="368.0" layoutY="387.0" mnemonicParsing="false" onAction="#addAppointment" prefHeight="35.0" prefWidth="87.0" text="Confirm" />
-      <Label layoutX="284.0" layoutY="39.0" prefHeight="19.0" prefWidth="43.0" text="Doctor">
+      <ComboBox fx:id="filter" layoutX="332.0" layoutY="36.0" prefHeight="25.0" prefWidth="123.0" promptText="%SelectDoctor" />
+      <Button fx:id="addButton" layoutX="368.0" layoutY="387.0" mnemonicParsing="false" onAction="#addAppointment" prefHeight="35.0" prefWidth="87.0" text="%Confirm" />
+      <Label layoutX="284.0" layoutY="39.0" prefHeight="19.0" prefWidth="43.0" text="%Doctor">
          <font>
             <Font size="14.0" />
          </font>
