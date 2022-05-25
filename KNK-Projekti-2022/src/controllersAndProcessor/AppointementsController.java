@@ -61,7 +61,7 @@ public class AppointementsController implements Initializable {
     private DatePicker myDatePicker;
     @FXML
     private Button addNew;
-    private ObservableList<String> comboList = FXCollections.observableArrayList("All", "Ophtamologue", "Remplacant");
+    private ObservableList<String> comboList = FXCollections.observableArrayList("All", "Endodontist", "Prosthetist");
     private ObservableList<AppointmentSearchResult> patientsList;
     private FilteredList<AppointmentSearchResult> searchResultList =null;
     private Callback<TableColumn<AppointmentSearchResult, Void>, TableCell<AppointmentSearchResult, Void>> cellFactory1;

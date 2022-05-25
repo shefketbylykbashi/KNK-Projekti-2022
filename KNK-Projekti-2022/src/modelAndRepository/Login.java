@@ -14,8 +14,6 @@ import controllersAndProcessor.HomeController;
 
 
 public  class Login {
-
- 
 	
     static public Connection cnx = CnxWithDB.getConnection();
 
