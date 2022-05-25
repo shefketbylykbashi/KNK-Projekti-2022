@@ -13,12 +13,12 @@
     <children>
         <TableView fx:id="table" layoutX="60.0" layoutY="206.0" prefHeight="370.0" prefWidth="800.0">
             <columns>
-                <TableColumn fx:id="col_actions" prefWidth="120.0" resizable="false" text="Actions" />
-                <TableColumn fx:id="col_fname" prefWidth="140.0" resizable="false" text="Family Name" />
-                <TableColumn fx:id="col_name" prefWidth="130.0" resizable="false" text="Name" />
-                <TableColumn fx:id="col_doctor" prefWidth="115.0" resizable="false" text="Doctor" />
-                <TableColumn fx:id="col_adr" prefWidth="175.0" resizable="false" text="Address" />
-                <TableColumn fx:id="col_num" prefWidth="120.0" resizable="false" text="Phone Number" />
+                <TableColumn fx:id="col_actions" prefWidth="120.0" resizable="false" text="%Actions" />
+                <TableColumn fx:id="col_fname" prefWidth="140.0" resizable="false" text="%FamilyName" />
+                <TableColumn fx:id="col_name" prefWidth="130.0" resizable="false" text="%Name" />
+                <TableColumn fx:id="col_doctor" prefWidth="115.0" resizable="false" text="%Doctor" />
+                <TableColumn fx:id="col_adr" prefWidth="175.0" resizable="false" text="%Address" />
+                <TableColumn fx:id="col_num" prefWidth="120.0" resizable="false" text="%PhoneNumber" />
             </columns>
         </TableView>
         <TextField fx:id="search" layoutX="60.0" layoutY="173.0" prefHeight="30.0" prefWidth="182.0">
@@ -26,17 +26,17 @@
                 <Font size="14.0" />
             </font>
         </TextField>
-        <ComboBox fx:id="filter" layoutX="260.0" layoutY="173.0" onAction="#getIt" prefHeight="30.0" prefWidth="123.0" promptText="Filter" />
-        <Label fx:id="waitingRoomLabel" alignment="CENTER" layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="Waiting Room" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="15.0">
+        <ComboBox fx:id="filter" layoutX="260.0" layoutY="173.0" onAction="#getIt" prefHeight="30.0" prefWidth="123.0" promptText="%Filter" />
+        <Label fx:id="waitingRoomLabel" alignment="CENTER" layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="%WaitingRoom" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="15.0">
             <font>
                 <Font size="40.0" />
             </font>
         </Label>
-        <Button fx:id="add" layoutX="744.0" layoutY="173.0" mnemonicParsing="false" onAction="#addAppointements" prefHeight="30.0" prefWidth="117.0" styleClass="appbutton" text="Add New">
+        <Button fx:id="add" layoutX="744.0" layoutY="173.0" mnemonicParsing="false" onAction="#addAppointements" prefHeight="30.0" prefWidth="117.0" styleClass="appbutton" text="%AddNew">
             <font>
                 <Font size="14.0" />
             </font>
-        </Button>
+        </Button>s
       <Label fx:id="current" layoutX="584.0" layoutY="71.0" styleClass="medlabelpush" AnchorPane.rightAnchor="220.2181913820374">
          <font>
             <Font size="20.0" />

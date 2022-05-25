@@ -18,7 +18,7 @@
                     <children>
                         <HBox prefHeight="16.0" prefWidth="200.0" spacing="32.0">
                             <children>
-                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="First name*">
+                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="%FirstName">
                                     <font>
                                         <Font size="13.0" />
                                     </font>
@@ -35,7 +35,7 @@
                         </HBox>
                         <HBox prefHeight="28.0" prefWidth="333.0" spacing="32.0">
                             <children>
-                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="Second name*">
+                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="%SecondName">
                                     <font>
                                         <Font size="13.0" />
                                     </font>
@@ -52,7 +52,7 @@
                         </HBox>
                         <HBox prefHeight="16.0" prefWidth="200.0" spacing="32.0">
                             <children>
-                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="Sex">
+                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="%Sex">
                                     <font>
                                         <Font size="13.0" />
                                     </font>
@@ -69,7 +69,7 @@
                         </HBox>
                         <HBox prefHeight="16.0" prefWidth="200.0" spacing="32.0">
                             <children>
-                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="Date of birth*">
+                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="%DateOfBirth">
                                     <font>
                                         <Font size="13.0" />
                                     </font>
@@ -79,7 +79,7 @@
                         </HBox>
                         <HBox prefHeight="16.0" prefWidth="200.0" spacing="32.0">
                             <children>
-                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="Phone number">
+                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="%PhoneNumber">
                                     <font>
                                         <Font size="13.0" />
                                     </font>
@@ -96,7 +96,7 @@
                         </HBox>
                         <HBox prefHeight="16.0" prefWidth="200.0" spacing="32.0">
                             <children>
-                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="Address">
+                                <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="100.0" styleClass="Labeladdpatientvbox" text="%Address">
                                     <font>
                                         <Font size="13.0" />
                                     </font>
@@ -118,7 +118,7 @@
                 </VBox>
             </children>
         </AnchorPane>
-        <Text fill="#545454" fontSmoothingType="LCD" layoutX="140.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient:" wrappingWidth="234.61188125610352">
+        <Text fill="#545454" fontSmoothingType="LCD" layoutX="140.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Patient:" wrappingWidth="234.61188125610352">
             <font>
                 <Font size="20.0" />
             </font>
