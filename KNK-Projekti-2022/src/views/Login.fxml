@@ -39,7 +39,7 @@
             </LinearGradient>
          </fill>
       </Circle>
-      <Label fx:id="select_user_label" layoutX="819.0" layoutY="222.0" styleClass="textlabel" text="%Select User:" textFill="#5e5656">
+      <Label fx:id="select_user_label" layoutX="819.0" layoutY="222.0" styleClass="textlabel" text="%SelectUser" textFill="#5e5656">
          <font>
             <Font name="Poppins Regular" size="21.0" />
          </font>
@@ -75,7 +75,7 @@
             <String fx:value="userbutton" />
          </styleClass>
       </Button>
-      <Label fx:id="password_label" layoutX="827.0" layoutY="422.0" styleClass="textlabel" text="%Password:" />
+      <Label fx:id="password_label" layoutX="827.0" layoutY="422.0" styleClass="textlabel" text="%Password" />
       <PasswordField fx:id="password_field" alignment="CENTER" layoutX="808.0" layoutY="461.0" promptText="%Password" styleClass="passwordfield" />
       <Button fx:id="submit_button" layoutX="833.0" layoutY="522.0" mnemonicParsing="false" onAction="#submit_buttonOnAction" text="%Submit" />
       <ImageView fitHeight="418.0" fitWidth="335.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
