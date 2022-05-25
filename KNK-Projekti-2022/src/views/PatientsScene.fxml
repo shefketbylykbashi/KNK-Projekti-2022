@@ -12,23 +12,23 @@
    <children>
       <TableView fx:id="PatientsTableView" layoutX="60.0" layoutY="232.0" prefHeight="370.0" prefWidth="800.0">
         <columns>
-          <TableColumn fx:id="col_actions" prefWidth="132.0" resizable="false" text="Actions" />
-          <TableColumn fx:id="col_familyname" prefWidth="125.0" resizable="false" text="Family name" />
-            <TableColumn fx:id="col_firstname" prefWidth="104.0" resizable="false" text="Name" />
-            <TableColumn fx:id="col_sex" prefWidth="50.0" resizable="false" text="Sex" />
-            <TableColumn fx:id="col_bdate" prefWidth="114.0" resizable="false" text="Date Of Birth" />
-            <TableColumn fx:id="col_address" prefWidth="155.0" resizable="false" text="Address" />
-            <TableColumn fx:id="col_phonenumber" prefWidth="122.0" resizable="false" text="Phone number" />
+          <TableColumn fx:id="col_actions" prefWidth="132.0" resizable="false" text="%Actions" />
+          <TableColumn fx:id="col_familyname" prefWidth="125.0" resizable="false" text="%FamilyName" />
+            <TableColumn fx:id="col_firstname" prefWidth="104.0" resizable="false" text="%Name" />
+            <TableColumn fx:id="col_sex" prefWidth="50.0" resizable="false" text="%Sex" />
+            <TableColumn fx:id="col_bdate" prefWidth="114.0" resizable="false" text="%DateOfBirth" />
+            <TableColumn fx:id="col_address" prefWidth="155.0" resizable="false" text="%Address" />
+            <TableColumn fx:id="col_phonenumber" prefWidth="122.0" resizable="false" text="%PhoneNumber" />
         </columns>
       </TableView>
       <TextField fx:id="searchField" layoutX="60.0" layoutY="196.0" prefHeight="31.0" prefWidth="168.0" />
-      <Button layoutX="681.0" layoutY="196.0" mnemonicParsing="false" onAction="#addPatient" prefHeight="30.0" prefWidth="179.0" styleClass="appbutton" text="Add new patient" />
-      <Label fx:id="DateTimeLab" alignment="BASELINE_CENTER" layoutX="742.0" layoutY="73.0" prefHeight="30.0" prefWidth="117.0" text="Date and time">
+      <Button layoutX="681.0" layoutY="196.0" mnemonicParsing="false" onAction="#addPatient" prefHeight="30.0" prefWidth="179.0" styleClass="appbutton" text="%AddNewPatient" />
+      <Label fx:id="DateTimeLab" alignment="BASELINE_CENTER" layoutX="742.0" layoutY="73.0" prefHeight="30.0" prefWidth="117.0" text="%DateAndTime">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="Patients" AnchorPane.leftAnchor="60.0">
+      <Label layoutX="60.0" layoutY="15.0" styleClass="PanelHead" text="%Patients" AnchorPane.leftAnchor="60.0">
          <font>
             <Font size="40.0" />
          </font>
