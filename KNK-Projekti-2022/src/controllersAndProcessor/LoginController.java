@@ -18,6 +18,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import modelAndRepository.Appointment;
 import modelAndRepository.Login;
+import processor.GenerateHash;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -59,7 +60,7 @@ public class LoginController {
     @FXML
     public Label password_label;
     @FXML
-    public PasswordField password_field;
+    public  PasswordField password_field;
     @FXML
     public Button submit_button;
     
@@ -120,31 +121,33 @@ public class LoginController {
         modelAndRepository.Login.initUsernameButtons(user_button_1, user_button_2, user_button_3);
     }
     
-    private static String bytesToHex(byte[] hash) {
-	    StringBuilder hexString = new StringBuilder(2 * hash.length);
-	    for (int i = 0; i < hash.length; i++) {
-	        String hex = Integer.toHexString(0xff & hash[i]);
-	        if(hex.length() == 1) {
-	            hexString.append('0');
-	        }
-	        hexString.append(hex);
-	    }
-	    return hexString.toString();
-	}
-    
-    public static String generate(String password, String salted) throws NoSuchAlgorithmException {
-		String originalString = password + salted;
-		MessageDigest digest = MessageDigest.getInstance("SHA-256");
-		byte[] hashbytes = digest.digest(originalString.getBytes(StandardCharsets.UTF_8));
-		String sha256Text = bytesToHex(hashbytes);
-		return sha256Text;
-	}
+//    private static String bytesToHex(byte[] hash) {
+//	    StringBuilder hexString = new StringBuilder(2 * hash.length);
+//	    for (int i = 0; i < hash.length; i++) {
+//	        String hex = Integer.toHexString(0xff & hash[i]);
+//	        if(hex.length() == 1) {
+//	            hexString.append('0');
+//	        }
+//	        hexString.append(hex);
+//	    }
+//	    return hexString.toString();
+//	}
+//    
+//    public static String generate(String password, String salted) throws NoSuchAlgorithmException {
+//		String originalString = password + salted;
+//		MessageDigest digest = MessageDigest.getInstance("SHA-256");
+//		byte[] hashbytes = digest.digest(originalString.getBytes(StandardCharsets.UTF_8));
+//		String sha256Text = bytesToHex(hashbytes);
+//		return sha256Text;
+//	}
 
-    public String salted;
+    public static String salted;
     static public Connection cnx = CnxWithDB.getConnection();
+    
     public void submit_buttonOnAction(ActionEvent event) throws IOException,NoSuchAlgorithmException {
         String user = invisibleUsernameLabel.getText();
         String password = password_field.getText();
+        
         
         String query = "SELECT salted FROM users WHERE username = ? ";
         
@@ -162,9 +165,9 @@ public class LoginController {
             throwables.printStackTrace();
         }
         
-        String saltedHash = LoginController.generate(password, salted);
+//        String saltedHash = LoginController.generate(password, salted);
         
-        int user_id = Login.login(user, saltedHash);
+        int user_id = Login.login(user, GenerateHash.generate(password, salted));
         
         if (user_id == 0) {
 //            Alert alert = new Alert(Alert.AlertType.ERROR, "The password entered is incorrect.");
@@ -177,15 +180,17 @@ public class LoginController {
      
         else {
 //            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Logged in succesfuly!");
-        	Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
-        	alert1.contentTextProperty().bind(I18N.createStringBinding("alert1"));
+//        	Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+//        	alert1.contentTextProperty().bind(I18N.createStringBinding("alert1"));
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.close();
-            alert1.showAndWait();
+//            alert1.showAndWait();
             controllersAndProcessor.AppController.setUser_id(user_id);
             openAppWindow(window);
         }
     }
+    
+    
     public void cleanButtonStyles(Button b) {
         b.getStyleClass().remove("userbutton");
         b.getStyleClass().remove("userbuttonChecked");

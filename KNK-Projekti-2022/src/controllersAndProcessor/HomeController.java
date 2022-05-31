@@ -79,6 +79,7 @@ public class HomeController implements Initializable {
 						"select count(patient_id), monthname(rdv_date) from appointments where rdv_date between '2022-01-01' and '2022-12-31' group by monthname(rdv_date) order by month(rdv_date) ";
                 
                 ResultSet rs = cnx.createStatement().executeQuery(sql);
+               
                 
                 while(rs.next()) {
                 	this.data.add(new PieChart.Data(rs.getString(2), rs.getDouble(1)));
