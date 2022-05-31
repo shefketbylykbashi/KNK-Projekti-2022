@@ -75,6 +75,7 @@ public class LoginController {
     @FXML
     void onClickAlb(ActionEvent event) {
     	lang = "de";
+//      uncomment this for translate alert
 //    	l1 =Locale.GERMAN;
 //    	switchLanguage(l1);
     }
