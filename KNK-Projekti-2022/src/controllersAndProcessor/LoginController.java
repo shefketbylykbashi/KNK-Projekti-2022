@@ -180,12 +180,12 @@ public class LoginController {
         }
      
         else {
-//            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Logged in succesfuly!");
-//        	Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
-//        	alert1.contentTextProperty().bind(I18N.createStringBinding("alert1"));
+           Alert alert = new Alert(Alert.AlertType.INFORMATION, "Logged in succesfuly!");
+       	Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+       	alert1.contentTextProperty().bind(I18N.createStringBinding("alert1"));
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.close();
-//            alert1.showAndWait();
+            alert1.showAndWait();
             controllersAndProcessor.AppController.setUser_id(user_id);
             openAppWindow(window);
         }
