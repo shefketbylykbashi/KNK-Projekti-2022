@@ -18,6 +18,11 @@ Hapat per ekzekutimin e kodit: &nbsp;
 4.	Konfigurimi i konektimit me database ne CnxWithDB.java (src/database/ CnxWithDB.java) &nbsp;<br/>
 5.  Startimi i Window Aplikacionit. &nbsp;<br/>
 
+Password for user : &nbsp;<br/>
+Receptionist --> 11 &nbsp;<br/>
+Endodontist --> 22 &nbsp;<br/>
+Prosthetist --> 33 &nbsp;<br/>
+
 ***Pamje nga ekzekutimi i programit***
 ![1](https://i.ibb.co/wLRtXYL/1.png)
 ![2](https://i.ibb.co/qYtBFbn/2.png)
